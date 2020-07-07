@@ -1,0 +1,6 @@
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c "echo runtime directory in %t"
+ExecStart=/usr/bin/bash -c "echo writing to %t/file"
+ExecStart=/usr/bin/bash -c "echo foo > %t/file"
+RuntimeDirectory=ops-tmpfs
