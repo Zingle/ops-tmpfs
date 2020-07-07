@@ -1,8 +1,8 @@
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/bash -c "echo runtime directory in %t"
-ExecStart=/usr/bin/bash -c "echo writing to %t/file"
-ExecStart=/usr/bin/bash -c "echo foo > %t/file"
+ExecStart=/usr/bin/bash -c "echo runtime directory in %t/ops-tmpfs"
+ExecStart=/usr/bin/bash -c "echo writing to %t/ops-tmpfs/file"
+ExecStart=/usr/bin/bash -c "echo foo > %t/ops-tmpfs/file"
 RuntimeDirectory=ops-tmpfs
 
 [Install]
