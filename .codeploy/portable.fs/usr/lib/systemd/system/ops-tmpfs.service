@@ -5,5 +5,8 @@ ExecStart=/usr/bin/bash -c "echo writing to %t/ops-tmpfs/file"
 ExecStart=/usr/bin/bash -c "echo foo > %t/ops-tmpfs/file"
 RuntimeDirectory=ops-tmpfs
 
+# NOTE: this next bit emulates the behavior of systemd 240+
+# Environment=RUNTIME_DIRECTORY=%t/ops-tmpfs
+
 [Install]
 WantedBy=multi-user.target
